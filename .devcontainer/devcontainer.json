@@ -1,0 +1,20 @@
+{
+  "name": "WorkFlow Créditos · Web",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "hostRequirements": { "cpus": 2, "memory": "8gb" },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": { "label": "WorkFlow Créditos", "onAutoForward": "notify", "visibility": "private", "protocol": "https" },
+    "8000": { "onAutoForward": "ignore" },
+    "8025": { "onAutoForward": "ignore" },
+    "5432": { "onAutoForward": "ignore" },
+    "6379": { "onAutoForward": "ignore" },
+    "10000": { "onAutoForward": "ignore" },
+    "3310": { "onAutoForward": "ignore" }
+  },
+  "postStartCommand": "python3 scripts/codespaces_start.py",
+  "customizations": { "vscode": { "settings": { "workbench.startupEditor": "readme" } } }
+}

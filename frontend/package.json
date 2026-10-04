@@ -1,0 +1,27 @@
+{
+  "name": "workflow-creditos-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "node scripts/start.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "15.5.27",
+    "react": "19.1.2",
+    "react-dom": "19.1.2",
+    "lucide-react": "^0.468.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "@types/react": "^19.0.3",
+    "@types/react-dom": "^19.0.2",
+    "@types/node": "^22.10.5"
+  },
+  "overrides": {
+    "postcss": "8.5.23",
+    "sharp": "0.35.4"
+  }
+}

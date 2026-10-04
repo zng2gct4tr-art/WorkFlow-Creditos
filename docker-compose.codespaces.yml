@@ -1,0 +1,22 @@
+# Persist data under /workspaces, outside ephemeral dev-container layers.
+services:
+  postgres:
+    volumes:
+      - type: bind
+        source: ./.workflow/data/postgres
+        target: /var/lib/postgresql/data
+  redis:
+    volumes:
+      - type: bind
+        source: ./.workflow/data/redis
+        target: /data
+  azurite:
+    volumes:
+      - type: bind
+        source: ./.workflow/data/objects
+        target: /data
+  clamav:
+    volumes:
+      - type: bind
+        source: ./.workflow/data/antivirus
+        target: /var/lib/clamav
