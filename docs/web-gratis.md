@@ -22,7 +22,7 @@ Hugging Face Docker Spaces se descartó: la documentación oficial consultada ex
 6. Para volver a entrar, reanudar el mismo Codespace desde [tus Codespaces](https://github.com/codespaces) y abrir su puerto **WorkFlow Créditos** o el enlace generado. No crear un entorno nuevo cada vez: cada uno tiene datos y cuota propios.
 7. Al terminar, usar **Stop codespace**. Revisar el consumo y respaldar base, objetos y claves antes de borrar o reconstruir el entorno. No subir `.env`, `.workflow` ni documentos al repositorio público.
 
-La preparación deja el puerto 3000 privado inicialmente. Los demás servicios no se exponen como aplicación pública. Para que otras personas entren sin una cuenta GitHub hay que evaluar abrir el puerto, después de crear el administrador y revisar permisos/seguridad; no se cambia su visibilidad automáticamente.
+El puerto 3000 conserva la visibilidad privada predeterminada de Codespaces. Su conexión interna al contenedor es HTTP porque Next no sirve TLS; el enlace externo usa HTTPS del proveedor. Los demás servicios no se exponen como aplicación pública. Para que otras personas entren sin una cuenta GitHub hay que evaluar abrir el puerto, después de crear el administrador y revisar permisos/seguridad; no se cambia su visibilidad automáticamente.
 
 ## Alcance
 
